@@ -1,0 +1,5 @@
+Name,Email,Password,Role,Stage,eid,mobile
+TestContractor,omar@mbrhe.test,Om@r12345,2,1,0,0
+ProdContractor,mrhecloud@mrhe.ae,Om@r1234!,2,3,0,0
+TestCustomer,TestCustomer@mbrhe.ae,0,1,1,784199657539872,971505969797
+ProdCustomer,ProdCustomer@mbrhe.ae,0,1,3,784197409183528,971504532655

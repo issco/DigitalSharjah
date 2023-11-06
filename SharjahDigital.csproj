@@ -1,0 +1,111 @@
+  <Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+      <TargetFramework>net6.0</TargetFramework>
+      <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>2</WarningLevel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Include="SharjahDigital.csproj" />
+    <None Include="SharjahDigital.sln" />
+  </ItemGroup>
+    <ItemGroup>
+    <None Update="Datasources\Attachments\attachment.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Drivers\chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+        <None Update="Drivers\chromedriver">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Drivers\geckodriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Drivers\IEDriverServer.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Drivers\msedgedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Drivers\operadriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Properties\launchSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Azure.Core" />
+    <None Remove="DotNetSeleniumExtras.PageObjects" />
+    <None Remove="DotNetSeleniumExtras.WaitHelpers" />
+    <None Remove="FluentAssertions" />
+    <None Remove="Gherkin" />
+    <None Remove="Microsoft.CodeCoverage" />
+    <None Remove="Microsoft.Data.SqlClient" />
+    <None Remove="Microsoft.NET.Test.Sdk" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="NUnit" />
+    <None Remove="NUnit.ConsoleRunner" />
+    <None Remove="NUnit3TestAdapter" />
+    <None Remove="Oracle.ManagedDataAccess.Core" />
+    <None Remove="RestSharp" />
+    <None Remove="Selenium.Support" />
+    <None Remove="Selenium.WebDriver" />
+    <None Remove="SpecFlow" />
+    <None Remove="SpecFlow.NUnit" />
+    <None Remove="SpecFlow.Plus.LivingDocPlugin" />
+    <None Remove="System.Configuration.ConfigurationManager" />
+    <None Remove="System.Data.SqlClient" />
+    <None Remove="System.Text.Json" />
+    <None Remove="Microsoft.TestPlatform.TestHost" />
+    <None Remove="SpecFlow.Tools.MsBuild.Generation" />
+    <None Remove="Xunit.SkippableFact" />
+    <None Remove="SpecRun.Runner" />
+    <None Remove="SharpScheduler" />
+    <None Remove="SpecRun.SpecFlow" />
+    <None Remove="WebDriverManager" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Core" Version="1.35.0" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="17.7.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.16.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Include="Selenium.Support" Version="4.15.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.15.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+    <PackageReference Include="System.Text.Json" Version="7.0.3" />
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="17.7.2" />
+    <PackageReference Include="WebDriverManager" Version="2.17.1" />
+    <PackageReference Include="GherkinSpec.Core" Version="3.0.2" />
+    <PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.74" />
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="Gherkin" Version="27.0.0" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.NUnit.Runners" Version="3.9.74" />
+  </ItemGroup>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="livingdoc test-assembly bin/Debug/net6.0/SharjahDigital.dll -t bin/Debug/net6.0/TestExecution.json" />
+</Target>
+
+
+
+
+</Project>

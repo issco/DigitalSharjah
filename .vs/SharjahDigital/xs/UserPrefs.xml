@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{AE5EC366-E012-4A9E-A8E3-76603DA511CA}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Steps/CheckoutSuccessSteps.cs">
+    <Files>
+      <File FileName="SharjahDigital.csproj" Line="115" Column="1" />
+      <File FileName="Features/Checkout_Success.feature" Line="15" Column="1" />
+      <File FileName="Steps/checkout_successful.cs" Line="58" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Option id="ShowVersionControlOverlays" value="False" />
+          <Node name="SharjahDigital" expanded="True">
+            <Node name="SharjahDigital" expanded="True">
+              <Node name="Features" expanded="True" />
+              <Node name="Steps" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="SharjahDigital" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SharjahDigital PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
